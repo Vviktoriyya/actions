@@ -1,0 +1,21 @@
+{{!-- scripts: ["scripts/script.js"] --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    {{> header}}
+
+    <main>
+        {{{body}}}
+    </main>
+
+    {{> footer}}
+    {{#each scripts}}
+        <script src="{{this}}"></script>
+    {{/each}}
+</body>
+</html>

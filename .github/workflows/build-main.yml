@@ -29,5 +29,18 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: .temp/project-build.tar.gz
-          target: ~/htdocs/wwakaww-v.swit.vn.ua
+          target: ~/htdocs/wwakaww.swit.vn.ua
           strip_components: 1
+
+      - name: Extract files
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd htdocs/wwakaww.swit.vn.ua/
+            tar -xzf project-build.tar.gz
+            rm -rf project-build.tar.gz
+            mv build/* ./
+            rm -rf build

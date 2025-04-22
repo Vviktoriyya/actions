@@ -29,5 +29,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: .temp/project-build.tar.gz
-          target: ~/htdocs/wwakaww-v.swit.vn.ua
+          target: ~/htdocs/wwakaww.swit.vn.ua
           strip_components: 1

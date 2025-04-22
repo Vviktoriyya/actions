@@ -11,7 +11,9 @@
   },
   "watch": {
     "build": {
-      "patterns": ["src"],
+      "patterns": [
+        "src"
+      ],
       "extensions": "hbs,css,js"
     }
   },
@@ -22,6 +24,7 @@
     "autoprefixer": "^10.4.21",
     "fs-extra": "^11.3.0",
     "handlebars": "^4.7.8",
+    "html-minifier": "^4.0.0",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1"
   },
